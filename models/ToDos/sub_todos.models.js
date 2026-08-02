@@ -1,31 +1,18 @@
-import mongoose from "mongoose"
+import mongoose from "mongoose";
 
-const userSchema = new mongoose.Schema(
-    {
-        username:{
-            type : String,
-            required : true,
-            unique : true, //Username should be unique
-            lowercase : true, //Username should be in lowercases
-        },
-        email: {
-            type : String,
-            required : true,
-            unique : true,
-            lowercase : true,
-        },
-
-        password : {
-            type : String,
-            required : true
-        },
-
-        isActive : Boolean
+const subTodoSchema = new mongoose.Schema({
+    content : {
+        type : String,
+        required : true,
+    },
+    complete : {
+        type : Boolean,
+        default : false
+    },
+    createdBy : {
+        type : mongoose.Schema.Types.ObjectId,
+        ref : "User"
     }
-    )
+}, {timestamps: true})
 
-export const User = mongoose.model("User", userSchema)
-// Kya model banau ? , kis ke base pe model banau ?
-
-// Database me model "User" -> users ke name se save hoga (plural + lowercase)
-
+export const SubTodo = mongoose.model("SubTodo", subTodoSchema)
