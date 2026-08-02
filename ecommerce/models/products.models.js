@@ -26,10 +26,16 @@ const productSchema = new mongoose.Schema({
     },
 
     category : {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Category",
+        required: true
+    },
+
+    owner : {
         type : mongoose.Schema.Types.ObjectId,
-        ref : "Category"
+        ref: "User"
     }
-}, {timestamps: true});
+    },{timestamps: true});
 
 
 export const Product = mongoose.model("Product", productSchema);
