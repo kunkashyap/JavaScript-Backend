@@ -1,14 +1,26 @@
 {
-  "name": "JavaScriptBackend",
+  "name": "javascriptbackend",
   "version": "1.0.0",
-  "description": "",
+  "private": true,
+  "description": "learning backend",
+  "homepage": "https://github.com/kunkashyap/JavaScript-Backend#readme",
+  "bugs": {
+    "url": "https://github.com/kunkashyap/JavaScript-Backend/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kunkashyap/JavaScript-Backend.git"
+  },
+  "license": "ISC",
+  "author": "Kunal Kashyap",
+  "type": "commonjs",
   "main": "SomeFiles/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "private": true,
   "dependencies": {
     "express": "^5.2.1",
     "mongoose": "^9.9.1"
-  }
+  },
+  "devDependencies": {}
 }
