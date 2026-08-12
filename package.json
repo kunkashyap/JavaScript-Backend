@@ -13,7 +13,7 @@
   },
   "license": "ISC",
   "author": "Kunal Kashyap",
-  "type": "commonjs",
+  "type": "module",
   "main": "Backend/src/index.js",
   "scripts": {
     "dev": "nodemon Backend/src/index.js",
@@ -22,6 +22,7 @@
   "dependencies": {
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "mongodb": "^7.5.0",
     "mongoose": "^9.9.2"
   },
   "devDependencies": {

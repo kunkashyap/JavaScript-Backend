@@ -1,9 +1,13 @@
 //require('dotenv').config({path:'./env'});
-import dotenv from 'dotenv';
+import dns from "dns";
+
+dns.setDefaultResultOrder("ipv4first");
+
+import dotenv from 'dotenv'
 import mongoose from 'mongoose'
 import {DB_NAME} from './constants.js'
 import express from 'express'
-import connectDB from "./db/db";
+import connectDB from "./db/db.js";
 
 const app = express()
 //While connecting database always use async / try-catch
@@ -11,7 +15,7 @@ const app = express()
 //                      APPROACH 1
 
 dotenv.config({
-    path : './env'
+    path : 'Backend/.env'
 });
 
 
