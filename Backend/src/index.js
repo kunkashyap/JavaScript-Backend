@@ -1,21 +1,24 @@
+//require('dotenv').config({path:'./env'});
+import dotenv from 'dotenv';
 import mongoose from 'mongoose'
 import {DB_NAME} from './constants.js'
 import express from 'express'
+import connectDB from "./db/db";
 
 const app = express()
 //While connecting database always use async / try-catch
 
+//                      APPROACH 1
+
+dotenv.config({
+    path : './env'
+});
 
 
+connectDB()
 
 
-
-
-
-
-
-
-
+/*                          APPROACH 2
 //iffe
 ;(async ()=> {
     try {
@@ -32,3 +35,5 @@ const app = express()
     console.log("ERROR", error)
     }
 }) ()
+
+ */
